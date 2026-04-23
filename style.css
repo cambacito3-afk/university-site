@@ -1030,7 +1030,6 @@ main > .section .centered-heading h2 {
   .destination-grid,
   .package-grid,
   .testimonial-grid,
-  .why-us-grid,
   .process-grid,
   .home-package-grid {
     grid-template-columns: 1fr;
@@ -1094,6 +1093,23 @@ main > .section .centered-heading h2 {
     padding-bottom: 22px;
     padding-right: 14px;
     padding-left: 14px;
+  }
+}
+
+@media (max-width: 560px) and (min-width: 361px) {
+  .why-us-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .why-us-grid article {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
   }
 }
 
