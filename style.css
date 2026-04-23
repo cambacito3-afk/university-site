@@ -1358,7 +1358,7 @@ main > .section .centered-heading h2 {
     font-size: 0.76rem;
     line-height: 1.18;
     letter-spacing: -0.01em;
-    max-width: 19ch;
+    max-width: 27ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: pretty;
@@ -1370,6 +1370,10 @@ main > .section .centered-heading h2 {
     margin-bottom: 10px;
   }
 
+  .refuel-feature img {
+    object-position: center 48%;
+  }
+
   .refuel-feature span,
   .refuel-note span {
     margin-bottom: 5px;
@@ -1377,27 +1381,27 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-card {
-    padding: 16px 15px;
+    padding: 14px 14px;
   }
 
   .testimonial-card p {
     margin-bottom: 10px;
-    font-size: 0.74rem;
-    line-height: 1.16;
+    font-size: 0.72rem;
+    line-height: 1.14;
     letter-spacing: -0.01em;
-    max-width: 18ch;
+    max-width: 16ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: pretty;
   }
 
   .testimonial-card h3 {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     line-height: 1.15;
   }
 
   .testimonial-card span {
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     line-height: 1.15;
   }
 
@@ -1408,7 +1412,7 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-grid {
-    grid-auto-columns: 72%;
+    grid-auto-columns: 64%;
     gap: 10px;
   }
 
@@ -1516,6 +1520,6 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-grid {
-    grid-auto-columns: 80%;
+    grid-auto-columns: 74%;
   }
 }
