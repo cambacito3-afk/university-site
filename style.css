@@ -1318,17 +1318,36 @@ main > .section .centered-heading h2 {
     min-height: 0;
   }
 
+  .refuel-layout {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    overflow: visible;
+    padding-bottom: 0;
+    padding-left: 0;
+    scroll-padding-left: 0;
+    scroll-snap-type: none;
+  }
+
   .refuel-feature,
   .refuel-note {
-    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .refuel-feature {
+    grid-column: 1 / -1;
   }
 
   .refuel-feature h3,
   .refuel-note h3 {
-    font-size: 0.84rem;
-    line-height: 1.14;
+    font-size: 0.82rem;
+    line-height: 1.1;
     letter-spacing: -0.015em;
-    max-width: 14ch;
+    max-width: 13ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: balance;
@@ -1336,44 +1355,61 @@ main > .section .centered-heading h2 {
 
   .refuel-feature p,
   .refuel-note p {
-    font-size: 0.78rem;
-    line-height: 1.22;
+    font-size: 0.76rem;
+    line-height: 1.18;
     letter-spacing: -0.01em;
-    max-width: 21ch;
+    max-width: 19ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: pretty;
   }
 
+  .refuel-feature img,
+  .refuel-note img {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .refuel-feature span,
+  .refuel-note span {
+    margin-bottom: 5px;
+    font-size: 0.66rem;
+  }
+
   .testimonial-card {
-    padding: 22px 18px;
+    padding: 16px 15px;
   }
 
   .testimonial-card p {
-    margin-bottom: 16px;
-    font-size: 0.78rem;
-    line-height: 1.22;
+    margin-bottom: 10px;
+    font-size: 0.74rem;
+    line-height: 1.16;
     letter-spacing: -0.01em;
-    max-width: 21ch;
+    max-width: 18ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: pretty;
   }
 
   .testimonial-card h3 {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 1.15;
   }
 
   .testimonial-card span {
-    font-size: 0.72rem;
-    line-height: 1.2;
+    font-size: 0.68rem;
+    line-height: 1.15;
   }
 
   .refuel-feature,
   .refuel-note,
   .testimonial-card {
     text-align: left;
+  }
+
+  .testimonial-grid {
+    grid-auto-columns: 72%;
+    gap: 10px;
   }
 
   .card-link {
@@ -1437,11 +1473,6 @@ main > .section .centered-heading h2 {
     flex-basis: 78%;
   }
 
-  .destination-preview {
-    grid-auto-flow: column;
-    grid-auto-columns: 78%;
-  }
-
   .destination-preview img,
   .destination-card img,
   .package-card img {
@@ -1470,9 +1501,21 @@ main > .section .centered-heading h2 {
     font-size: 0.9rem;
   }
 
+  .refuel-layout {
+    grid-template-columns: 1fr;
+  }
+
   .refuel-feature,
-  .refuel-note,
-  .testimonial-card {
-    text-align: center;
+  .refuel-note {
+    padding: 14px;
+  }
+
+  .refuel-feature img,
+  .refuel-note img {
+    height: 108px;
+  }
+
+  .testimonial-grid {
+    grid-auto-columns: 80%;
   }
 }
