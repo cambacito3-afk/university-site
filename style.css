@@ -1046,12 +1046,17 @@ main > .section .centered-heading h2 {
   .destination-preview,
   .destination-grid,
   .package-grid,
-  .home-package-grid,
+  .home-package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .refuel-layout,
   .testimonial-grid {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 84%;
+    grid-auto-columns: 88%;
     gap: 14px;
     overflow-x: auto;
     padding-bottom: 8px;
@@ -1063,9 +1068,6 @@ main > .section .centered-heading h2 {
     -webkit-overflow-scrolling: touch;
   }
 
-  .destination-preview article,
-  .destination-card,
-  .package-card,
   .refuel-feature,
   .refuel-note,
   .testimonial-card {
@@ -1119,7 +1121,7 @@ main > .section .centered-heading h2 {
   .package-card img,
   .refuel-feature img,
   .refuel-note img {
-    height: 140px;
+    height: 118px;
     object-position: var(--media-pos-mobile, var(--media-pos, center));
   }
 
@@ -1201,9 +1203,9 @@ main > .section .centered-heading h2 {
   .destination-preview h3,
   .destination-card h2,
   .package-card h2 {
-    margin-top: 14px;
-    margin-bottom: 8px;
-    font-size: 1rem;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-size: 0.94rem;
   }
 
   .destination-preview p,
@@ -1221,11 +1223,34 @@ main > .section .centered-heading h2 {
     display: none;
   }
 
+  .destination-preview article,
+  .destination-card,
+  .package-card {
+    min-height: 100%;
+  }
+
+  .destination-preview article,
+  .package-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .destination-preview p,
+  .destination-card p,
+  .package-card p:not(.price) {
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    line-height: 1.32;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+
   .home-package-grid .price,
   .package-card .price {
     margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 1rem;
+    margin-bottom: 14px;
+    font-size: 0.96rem;
+    line-height: 1.2;
   }
 
   .refuel-feature,
@@ -1234,8 +1259,52 @@ main > .section .centered-heading h2 {
     min-height: 0;
   }
 
+  .refuel-feature,
+  .refuel-note {
+    padding: 18px;
+  }
+
+  .refuel-feature h3,
+  .refuel-note h3 {
+    font-size: 1rem;
+    line-height: 1.18;
+    max-width: 18ch;
+    text-wrap: balance;
+  }
+
+  .refuel-feature p,
+  .refuel-note p {
+    font-size: 0.9rem;
+    line-height: 1.34;
+    max-width: 26ch;
+    text-wrap: pretty;
+  }
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .testimonial-card p {
+    margin-bottom: 16px;
+    font-size: 0.94rem;
+    line-height: 1.38;
+    max-width: 28ch;
+    text-wrap: pretty;
+  }
+
+  .testimonial-card h3 {
+    font-size: 0.96rem;
+    line-height: 1.2;
+  }
+
+  .testimonial-card span {
+    font-size: 0.84rem;
+    line-height: 1.25;
+  }
+
   .card-link {
     margin-bottom: 16px;
+    margin-top: auto;
   }
 
   .reference-list p {
@@ -1273,5 +1342,41 @@ main > .section .centered-heading h2 {
 
   .final-cta-box {
     padding: 30px 18px;
+  }
+
+  .destination-preview,
+  .destination-grid,
+  .package-grid,
+  .home-package-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .destination-preview img,
+  .destination-card img,
+  .package-card img {
+    height: 104px;
+  }
+
+  .destination-preview h3,
+  .destination-card h2,
+  .package-card h2 {
+    font-size: 0.88rem;
+    line-height: 1.15;
+    max-width: 16ch;
+    text-wrap: balance;
+  }
+
+  .destination-preview p,
+  .destination-card p,
+  .package-card p:not(.price) {
+    font-size: 0.84rem;
+    line-height: 1.28;
+    max-width: 20ch;
+  }
+
+  .home-package-grid .price,
+  .package-card .price {
+    font-size: 0.9rem;
   }
 }
