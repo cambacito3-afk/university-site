@@ -498,6 +498,10 @@ textarea:focus {
   text-align: center;
 }
 
+.mobile-scroll-hint {
+  display: none;
+}
+
 main > .section .centered-heading h2 {
   font-size: clamp(2rem, 3.8vw, 3.5rem);
   letter-spacing: 0.04em;
@@ -1014,6 +1018,19 @@ main > .section .centered-heading h2 {
   .final-cta-box {
     padding: 34px 24px;
   }
+
+  .refuel-feature h3,
+  .refuel-note h3 {
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+  }
+
+  .refuel-feature p,
+  .refuel-note p,
+  .testimonial-card p {
+    line-height: 1.38;
+    letter-spacing: -0.01em;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1031,6 +1048,16 @@ main > .section .centered-heading h2 {
 
   .section-heading {
     margin-bottom: 18px;
+  }
+
+  .mobile-scroll-hint {
+    display: block;
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .eyebrow {
@@ -1055,9 +1082,8 @@ main > .section .centered-heading h2 {
   }
 
   .destination-preview {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 72%;
+    display: flex;
+    position: relative;
     gap: 12px;
     overflow-x: auto;
     padding-bottom: 8px;
@@ -1067,6 +1093,16 @@ main > .section .centered-heading h2 {
     overscroll-behavior-x: contain;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .destination-preview::after {
+    position: sticky;
+    right: 0;
+    width: 28px;
+    min-width: 28px;
+    background: linear-gradient(90deg, rgba(244, 247, 249, 0), rgba(244, 247, 249, 0.96));
+    content: "";
+    pointer-events: none;
   }
 
   .refuel-layout,
@@ -1086,6 +1122,7 @@ main > .section .centered-heading h2 {
   }
 
   .destination-preview article {
+    flex: 0 0 72%;
     min-height: 100%;
     scroll-snap-align: start;
   }
@@ -1288,23 +1325,23 @@ main > .section .centered-heading h2 {
 
   .refuel-feature h3,
   .refuel-note h3 {
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     line-height: 1.14;
     letter-spacing: -0.015em;
-    max-width: 15ch;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 14ch;
+    margin-right: 0;
+    margin-left: 0;
     text-wrap: balance;
   }
 
   .refuel-feature p,
   .refuel-note p {
-    font-size: 0.84rem;
-    line-height: 1.28;
+    font-size: 0.78rem;
+    line-height: 1.22;
     letter-spacing: -0.01em;
-    max-width: 24ch;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 21ch;
+    margin-right: 0;
+    margin-left: 0;
     text-wrap: pretty;
   }
 
@@ -1314,23 +1351,29 @@ main > .section .centered-heading h2 {
 
   .testimonial-card p {
     margin-bottom: 16px;
-    font-size: 0.86rem;
-    line-height: 1.32;
+    font-size: 0.78rem;
+    line-height: 1.22;
     letter-spacing: -0.01em;
-    max-width: 24ch;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 21ch;
+    margin-right: 0;
+    margin-left: 0;
     text-wrap: pretty;
   }
 
   .testimonial-card h3 {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     line-height: 1.15;
   }
 
   .testimonial-card span {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     line-height: 1.2;
+  }
+
+  .refuel-feature,
+  .refuel-note,
+  .testimonial-card {
+    text-align: left;
   }
 
   .card-link {
@@ -1375,12 +1418,23 @@ main > .section .centered-heading h2 {
     padding: 30px 18px;
   }
 
-  .destination-preview,
   .destination-grid,
   .package-grid,
   .home-package-grid {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  .destination-preview {
+    gap: 10px;
+  }
+
+  .mobile-scroll-hint {
+    font-size: 0.68rem;
+  }
+
+  .destination-preview article {
+    flex-basis: 78%;
   }
 
   .destination-preview {
