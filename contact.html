@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | 6 Majors Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html">6 Majors Travel</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Contact form</p>
+      <h1>Request travel information.</h1>
+      <p>Complete the form below to ask about a marathon travel package. This form collects user input as required by the assignment brief.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <form class="contact-form" action="#" method="post">
+        <label for="full-name">Full name</label>
+        <input id="full-name" name="full-name" type="text" required>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="destination">Preferred destination</label>
+        <select id="destination" name="destination">
+          <option value="">Please select</option>
+          <option>Tokyo</option>
+          <option>Boston</option>
+          <option>London</option>
+          <option>Berlin</option>
+          <option>Chicago</option>
+          <option>New York</option>
+        </select>
+
+        <label for="travellers">Number of travellers</label>
+        <input id="travellers" name="travellers" type="number" min="1" max="20">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6"></textarea>
+
+        <button class="button" type="submit">Submit enquiry</button>
+      </form>
+
+      <aside class="contact-panel">
+        <h2>Agency details</h2>
+        <p>Email: info@6majorstravel.example</p>
+        <p>Telephone: +44 020 0000 0000</p>
+        <p>Office: London, United Kingdom</p>
+        <p>This is a student project website and not a live travel booking service.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 6 Majors Travel. Student website project.</p>
+    <a href="references.html">References and image sources</a>
+  </footer>
+</body>
+</html>
