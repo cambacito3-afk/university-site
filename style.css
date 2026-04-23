@@ -1344,6 +1344,8 @@ main > .section .centered-heading h2 {
 
   .refuel-feature h3,
   .refuel-note h3 {
+    display: block;
+    width: 100%;
     font-size: 0.82rem;
     line-height: 1.1;
     letter-spacing: -0.015em;
@@ -1355,6 +1357,7 @@ main > .section .centered-heading h2 {
 
   .refuel-feature h3 {
     max-width: none;
+    text-wrap: pretty;
   }
 
   .refuel-feature p,
