@@ -182,7 +182,7 @@ textarea:focus {
 
 .hero::after {
   background-image: url("assets/run.webp");
-  background-position: center;
+  background-position: center 38%;
   opacity: 0;
   animation: heroSecondImage 30s infinite;
 }
@@ -468,10 +468,6 @@ textarea:focus {
   line-height: 1.3;
 }
 
-.why-title-mobile {
-  display: none;
-}
-
 .page-hero {
   max-width: 860px;
   text-align: center;
@@ -564,6 +560,7 @@ main > .section .centered-heading h2 {
   width: 100%;
   height: 190px;
   object-fit: cover;
+  object-position: var(--media-pos, center);
 }
 
 .destination-preview img {
@@ -647,6 +644,7 @@ main > .section .centered-heading h2 {
   height: 132px;
   object-fit: cover;
   border-radius: 4px;
+  object-position: var(--media-pos, center);
 }
 
 .refuel-feature span,
@@ -814,6 +812,7 @@ main > .section .centered-heading h2 {
   width: 100%;
   height: 380px;
   object-fit: cover;
+  object-position: var(--media-pos, center);
   border-radius: 6px;
   box-shadow: var(--shadow);
 }
@@ -1021,22 +1020,57 @@ main > .section .centered-heading h2 {
     width: min(100% - 28px, 1120px);
   }
 
+  .section,
+  .page-hero {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .eyebrow {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+  }
+
   .nav-links {
     width: 100%;
   }
 
-  .navbar {
-    width: min(100% - 28px, 1120px);
+  .service-grid {
+    grid-template-columns: 1fr;
   }
 
-  .service-grid,
   .destination-preview,
   .destination-grid,
   .package-grid,
-  .testimonial-grid,
-  .process-grid,
-  .home-package-grid {
-    grid-template-columns: 1fr;
+  .home-package-grid,
+  .refuel-layout,
+  .testimonial-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    scroll-padding-left: 2px;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .destination-preview article,
+  .destination-card,
+  .package-card,
+  .refuel-feature,
+  .refuel-note,
+  .testimonial-card {
+    min-height: 100%;
+    scroll-snap-align: start;
   }
 
   .why-us-grid {
@@ -1044,8 +1078,9 @@ main > .section .centered-heading h2 {
     gap: 12px;
   }
 
-  .refuel-layout {
-    grid-template-columns: 1fr;
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .hero {
@@ -1063,15 +1098,20 @@ main > .section .centered-heading h2 {
   }
 
   .hero::before {
-    background-position: 64% 32%;
+    background-position: 70% 32%;
+  }
+
+  .hero::after {
+    background-position: 60% 38%;
   }
 
   .hero-slide-jornalist {
-    background-position: 48% center;
+    background-position: 58% center;
   }
 
   .two-column img {
     height: 280px;
+    object-position: var(--media-pos-mobile, var(--media-pos, center 40%));
   }
 
   .destination-preview img,
@@ -1079,7 +1119,8 @@ main > .section .centered-heading h2 {
   .package-card img,
   .refuel-feature img,
   .refuel-note img {
-    height: 210px;
+    height: 140px;
+    object-position: var(--media-pos-mobile, var(--media-pos, center));
   }
 
   .contact-form,
@@ -1119,12 +1160,82 @@ main > .section .centered-heading h2 {
     height: 20px;
   }
 
-  .why-title-desktop {
+  .process-grid article {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 12px;
+    text-align: center;
+  }
+
+  .process-grid h3 {
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .process-grid .why-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+  }
+
+  .process-grid .why-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .destination-preview h3,
+  .destination-preview p,
+  .destination-preview .card-link,
+  .destination-card h2,
+  .destination-card p,
+  .package-card h2,
+  .package-card p,
+  .package-card ul {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .destination-preview h3,
+  .destination-card h2,
+  .package-card h2 {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .destination-preview p,
+  .destination-card p,
+  .package-card p,
+  .refuel-feature p,
+  .refuel-note p,
+  .testimonial-card p,
+  .page-hero p:last-child {
+    overflow: visible;
+  }
+
+  .home-package-grid .package-card ul,
+  .package-grid .package-card ul {
     display: none;
   }
 
-  .why-title-mobile {
-    display: inline;
+  .home-package-grid .price,
+  .package-card .price {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1rem;
+  }
+
+  .refuel-feature,
+  .refuel-note,
+  .testimonial-card {
+    min-height: 0;
+  }
+
+  .card-link {
+    margin-bottom: 16px;
   }
 
   .reference-list p {
