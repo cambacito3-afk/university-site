@@ -1353,6 +1353,10 @@ main > .section .centered-heading h2 {
     text-wrap: balance;
   }
 
+  .refuel-feature h3 {
+    max-width: none;
+  }
+
   .refuel-feature p,
   .refuel-note p {
     font-size: 0.76rem;
