@@ -914,6 +914,7 @@ main > .section .centered-heading h2 {
   }
 
   .nav-links {
+    display: none;
     position: absolute;
     top: calc(100% + 10px);
     right: 0;
@@ -935,6 +936,7 @@ main > .section .centered-heading h2 {
   }
 
   .navbar.menu-visible .nav-links {
+    display: flex;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
