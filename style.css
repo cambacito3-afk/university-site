@@ -1381,28 +1381,33 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-card {
-    padding: 14px 13px;
+    padding: 10px 11px;
+  }
+
+  .testimonial-card::before {
+    margin-bottom: 6px;
+    font-size: 1.6rem;
   }
 
   .testimonial-card p {
-    margin-bottom: 8px;
-    font-size: 0.68rem;
-    line-height: 1.1;
+    margin-bottom: 6px;
+    font-size: 0.64rem;
+    line-height: 1.08;
     letter-spacing: -0.01em;
-    max-width: 14ch;
+    max-width: 16ch;
     margin-right: 0;
     margin-left: 0;
     text-wrap: pretty;
   }
 
   .testimonial-card h3 {
-    font-size: 0.74rem;
-    line-height: 1.1;
+    font-size: 0.7rem;
+    line-height: 1.08;
   }
 
   .testimonial-card span {
-    font-size: 0.62rem;
-    line-height: 1.1;
+    font-size: 0.6rem;
+    line-height: 1.08;
   }
 
   .refuel-feature,
@@ -1412,8 +1417,9 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-grid {
-    grid-auto-columns: 56%;
+    grid-auto-columns: 42%;
     gap: 8px;
+    padding-left: 0;
   }
 
   .card-link {
@@ -1520,6 +1526,6 @@ main > .section .centered-heading h2 {
   }
 
   .testimonial-grid {
-    grid-auto-columns: 66%;
+    grid-auto-columns: 50%;
   }
 }
