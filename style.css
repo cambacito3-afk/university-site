@@ -661,6 +661,7 @@ main > .section .centered-heading h2 {
   margin: 12px 0 10px;
   color: var(--brand-dark);
   line-height: 1.18;
+  letter-spacing: -0.01em;
 }
 
 .refuel-feature h3,
@@ -752,6 +753,8 @@ main > .section .centered-heading h2 {
   margin: 0 0 22px;
   color: var(--ink);
   font-size: 1.02rem;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
 }
 
 .testimonial-card h3 {
@@ -1043,13 +1046,27 @@ main > .section .centered-heading h2 {
     grid-template-columns: 1fr;
   }
 
-  .destination-preview,
   .destination-grid,
   .package-grid,
   .home-package-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .destination-preview {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    scroll-padding-left: 2px;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
 
   .refuel-layout,
@@ -1066,6 +1083,11 @@ main > .section .centered-heading h2 {
     overscroll-behavior-x: contain;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .destination-preview article {
+    min-height: 100%;
+    scroll-snap-align: start;
   }
 
   .refuel-feature,
@@ -1266,17 +1288,23 @@ main > .section .centered-heading h2 {
 
   .refuel-feature h3,
   .refuel-note h3 {
-    font-size: 1rem;
-    line-height: 1.18;
-    max-width: 18ch;
+    font-size: 0.92rem;
+    line-height: 1.14;
+    letter-spacing: -0.015em;
+    max-width: 15ch;
+    margin-right: auto;
+    margin-left: auto;
     text-wrap: balance;
   }
 
   .refuel-feature p,
   .refuel-note p {
-    font-size: 0.9rem;
-    line-height: 1.34;
-    max-width: 26ch;
+    font-size: 0.84rem;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    max-width: 24ch;
+    margin-right: auto;
+    margin-left: auto;
     text-wrap: pretty;
   }
 
@@ -1286,20 +1314,23 @@ main > .section .centered-heading h2 {
 
   .testimonial-card p {
     margin-bottom: 16px;
-    font-size: 0.94rem;
-    line-height: 1.38;
-    max-width: 28ch;
+    font-size: 0.86rem;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+    max-width: 24ch;
+    margin-right: auto;
+    margin-left: auto;
     text-wrap: pretty;
   }
 
   .testimonial-card h3 {
-    font-size: 0.96rem;
-    line-height: 1.2;
+    font-size: 0.9rem;
+    line-height: 1.15;
   }
 
   .testimonial-card span {
-    font-size: 0.84rem;
-    line-height: 1.25;
+    font-size: 0.78rem;
+    line-height: 1.2;
   }
 
   .card-link {
@@ -1352,6 +1383,11 @@ main > .section .centered-heading h2 {
     gap: 10px;
   }
 
+  .destination-preview {
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+  }
+
   .destination-preview img,
   .destination-card img,
   .package-card img {
@@ -1378,5 +1414,11 @@ main > .section .centered-heading h2 {
   .home-package-grid .price,
   .package-card .price {
     font-size: 0.9rem;
+  }
+
+  .refuel-feature,
+  .refuel-note,
+  .testimonial-card {
+    text-align: center;
   }
 }
