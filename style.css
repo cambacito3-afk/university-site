@@ -1035,6 +1035,11 @@ main > .section .centered-heading h2 {
     grid-template-columns: 1fr;
   }
 
+  .why-us-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .refuel-layout {
     grid-template-columns: 1fr;
   }
@@ -1084,6 +1089,14 @@ main > .section .centered-heading h2 {
     padding: 20px;
   }
 
+  .why-us-grid article {
+    min-height: 0;
+  }
+
+  .why-us-grid h3 {
+    font-size: 0.95rem;
+  }
+
   .reference-list p {
     overflow-wrap: anywhere;
   }
@@ -1093,23 +1106,6 @@ main > .section .centered-heading h2 {
     padding-bottom: 22px;
     padding-right: 14px;
     padding-left: 14px;
-  }
-}
-
-@media (max-width: 560px) and (min-width: 361px) {
-  .why-us-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  .why-us-grid article {
-    min-height: 0;
-  }
-}
-
-@media (max-width: 360px) {
-  .why-us-grid {
-    grid-template-columns: 1fr;
   }
 }
 
