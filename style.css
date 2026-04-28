@@ -1212,13 +1212,28 @@ main > .section .centered-heading h2 {
     padding: 28px 14px 62px;
   }
 
-  .hero-actions,
-  .hero .button {
+  .hero-actions {
     width: 100%;
+    margin-top: 130px;
+    gap: 8px;
   }
 
   .hero .button {
-    min-height: 50px;
+    width: auto;
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 0.82rem;
+    box-shadow: none;
+  }
+
+  .hero-button-primary {
+    border-color: rgba(246, 213, 139, 0.78);
+    background: rgba(246, 213, 139, 0.82);
+  }
+
+  .hero-button-secondary {
+    border-color: rgba(255, 255, 255, 0.46);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .hero::before {
