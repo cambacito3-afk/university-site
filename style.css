@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+  padding-top: 57px;
   background: #ffffff;
   color: var(--ink);
   font-family: Arial, Helvetica, sans-serif;
@@ -42,8 +43,10 @@ textarea:focus {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 10;
   background: #ffffff;
   border-bottom: 1px solid var(--line);
@@ -57,7 +60,7 @@ textarea:focus {
   position: relative;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 18px 0;
+  padding: 10px 0;
 }
 
 .logo {
@@ -571,8 +574,9 @@ main > .section .centered-heading h2 {
 .package-card img {
   width: 100%;
   height: 190px;
-  object-fit: cover;
+  object-fit: var(--media-fit, cover);
   object-position: var(--media-pos, center);
+  background: var(--soft);
 }
 
 .destination-preview img {
@@ -912,10 +916,18 @@ main > .section .centered-heading h2 {
 }
 
 @media (max-width: 860px) {
+  body {
+    padding-top: 65px;
+  }
+
+  .site-header {
+    z-index: 1000;
+  }
+
   .navbar {
     flex-wrap: wrap;
     gap: 16px;
-    padding: 14px 0;
+    padding: 8px 0;
   }
 
   .nav-toggle {
