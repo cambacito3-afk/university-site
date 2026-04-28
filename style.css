@@ -188,21 +188,28 @@ textarea:focus {
 .hero::before {
   background-image: url("assets/portada.png");
   background-position: 62% 28%;
-  animation: heroFirstImage 30s infinite;
+  animation: heroFirstImage 40s infinite;
 }
 
 .hero::after {
   background-image: url("assets/run.webp");
   background-position: center 38%;
   opacity: 0;
-  animation: heroSecondImage 30s infinite;
+  animation: heroSecondImage 40s infinite;
 }
 
 .hero-slide-jornalist {
   background-image: url("assets/jornalist.png");
   background-position: 53% center;
   opacity: 0;
-  animation: heroThirdImage 30s infinite;
+  animation: heroThirdImage 40s infinite;
+}
+
+.hero-slide-lucy {
+  background-image: url("assets/lucy11.png");
+  background-position: center 38%;
+  opacity: 0;
+  animation: heroFourthImage 40s infinite;
 }
 
 .hero-copy {
@@ -212,12 +219,12 @@ textarea:focus {
 
 @keyframes heroFirstImage {
   0%,
-  30% {
+  22% {
     opacity: 1;
   }
 
-  35%,
-  96% {
+  27%,
+  94% {
     opacity: 0;
   }
 
@@ -228,16 +235,16 @@ textarea:focus {
 
 @keyframes heroSecondImage {
   0%,
-  30% {
+  22% {
     opacity: 0;
   }
 
-  35%,
-  63% {
+  27%,
+  47% {
     opacity: 1;
   }
 
-  68%,
+  52%,
   100% {
     opacity: 0;
   }
@@ -245,12 +252,29 @@ textarea:focus {
 
 @keyframes heroThirdImage {
   0%,
-  63% {
+  47% {
     opacity: 0;
   }
 
-  68%,
-  96% {
+  52%,
+  72% {
+    opacity: 1;
+  }
+
+  77%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes heroFourthImage {
+  0%,
+  72% {
+    opacity: 0;
+  }
+
+  77%,
+  94% {
     opacity: 1;
   }
 
