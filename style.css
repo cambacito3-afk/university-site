@@ -569,6 +569,11 @@ main > .section .centered-heading h2 {
   overflow: hidden;
 }
 
+.destination-preview article.no-border,
+.destination-card.no-border {
+  border: 0;
+}
+
 .destination-preview img,
 .destination-card img,
 .package-card img {
@@ -617,6 +622,28 @@ main > .section .centered-heading h2 {
 .card-link:hover {
   color: var(--brand-dark);
   text-decoration: underline;
+}
+
+.destination-official-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.destination-official-link:focus-visible {
+  outline: 3px solid rgba(24, 78, 95, 0.35);
+  outline-offset: 4px;
+}
+
+.package-contact-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.package-contact-link:focus-visible {
+  outline: 3px solid rgba(24, 78, 95, 0.35);
+  outline-offset: 4px;
 }
 
 .refuel-section {
