@@ -1207,8 +1207,9 @@ main > .section .centered-heading h2 {
   }
 
   .hero {
+    align-items: flex-start;
     min-height: 560px;
-    padding: 62px 14px;
+    padding: 28px 14px 62px;
   }
 
   .hero-actions,
@@ -1221,19 +1222,19 @@ main > .section .centered-heading h2 {
   }
 
   .hero::before {
-    background-position: 70% top;
+    background-position: 70% top !important;
   }
 
   .hero::after {
-    background-position: 60% top;
+    background-position: 60% top !important;
   }
 
   .hero-slide-jornalist {
-    background-position: 58% top;
+    background-position: 58% top !important;
   }
 
   .hero-slide-lucy {
-    background-position: center top;
+    background-position: center top !important;
   }
 
   .two-column img {
