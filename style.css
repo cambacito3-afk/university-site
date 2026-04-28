@@ -1221,15 +1221,19 @@ main > .section .centered-heading h2 {
   }
 
   .hero::before {
-    background-position: 70% 32%;
+    background-position: 70% top;
   }
 
   .hero::after {
-    background-position: 60% 38%;
+    background-position: 60% top;
   }
 
   .hero-slide-jornalist {
-    background-position: 58% center;
+    background-position: 58% top;
+  }
+
+  .hero-slide-lucy {
+    background-position: center top;
   }
 
   .two-column img {
