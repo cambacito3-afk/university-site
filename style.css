@@ -6,7 +6,7 @@
   --soft: #f4f7f9;
   --brand: #184e5f;
   --brand-dark: #103746;
-  --accent: #b68b3f;
+  --accent: #8a6421;
   --shadow: 0 14px 32px rgba(31, 41, 51, 0.10);
 }
 
@@ -327,13 +327,13 @@ textarea:focus {
 }
 
 .hero .button-secondary {
-  border-color: rgba(246, 213, 139, 0.82);
-  background: rgba(255, 255, 255, 0.10);
+  border-color: #ffffff;
+  background: var(--brand-dark);
   color: #ffffff;
 }
 
 .hero .button-secondary:hover {
-  background: rgba(246, 213, 139, 0.18);
+  background: #184e5f;
 }
 
 .eyebrow {
